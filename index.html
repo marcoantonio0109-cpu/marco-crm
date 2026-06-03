@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Marco CRM</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+   <div class="logo-area">
+
+    <div class="logo-icon">
+        M
+    </div>
+
+    <div>
+
+        <h2>Marco CRM</h2>
+
+        <span>Business Suite</span>
+
+    </div>
+
+</div>
+
+    <ul>
+
+        <li>📊 Dashboard</li>
+        <li>👥 Clientes</li>
+        <li>💰 Vendas</li>
+        <li>⚙️ Configurações</li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <header>
+
+        <h1>Dashboard</h1>
+
+        <button id="addClientBtn">
+            + Novo Cliente
+        </button>
+
+    </header>
+    <div class="user-box">
+
+    <div class="user-avatar">
+        M
+    </div>
+
+    <div>
+
+        <strong>Marco</strong>
+
+        <p>Administrador</p>
+
+    </div>
+
+</div>
+
+    <section class="stats">
+        <section class="grafico-section">
+
+    <div class="grafico-card">
+
+        <h2>Funil de Clientes</h2>
+
+        <canvas id="crmChart"></canvas>
+
+    </div>
+
+</section>
+<section class="kanban-section">
+
+    <h2>Pipeline de Vendas</h2>
+
+    <div class="kanban">
+
+        <div class="kanban-column">
+
+            <h3>🟡 Leads</h3>
+
+            <div id="leadColumn"></div>
+
+        </div>
+
+        <div class="kanban-column">
+
+            <h3>🔵 Contatos</h3>
+
+            <div id="contatoColumn"></div>
+
+        </div>
+
+        <div class="kanban-column">
+
+            <h3>🟣 Propostas</h3>
+
+            <div id="propostaColumn"></div>
+
+        </div>
+
+        <div class="kanban-column">
+
+            <h3>🟢 Fechados</h3>
+
+            <div id="fechadoColumn"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <div class="card">
+
+            <h3 id="totalClientes">0</h3>
+
+            <p>Clientes</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3 id="totalLeads">0</h3>
+
+            <p>Leads</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3 id="totalFechados">0</h3>
+
+            <p>Fechados</p>
+
+        </div>
+
+    </section>
+
+    <section class="clientes">
+
+        <h2>Clientes</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Buscar cliente..."
+            >
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="clientTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2>Novo Cliente</h2>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Nome do cliente"
+        >
+
+        <input
+            type="text"
+            id="telefone"
+            placeholder="Telefone"
+        >
+
+        <button id="salvarCliente">
+
+            Salvar Cliente
+
+        </button>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
